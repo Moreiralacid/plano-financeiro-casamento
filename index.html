@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Planejamento financeiro de Cide e Rebeca para o noivado, casamento e primeiro ano de vida a dois.">
+  <meta name="theme-color" content="#4A1832">
+  <title>Aliança Financeira — Cide & Rebeca</title>
+  <link rel="icon" type="image/png" href="assets/logo-ar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="welcome-active">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <section class="welcome" id="welcome" aria-labelledby="welcome-title">
+    <div class="welcome-photo">
+      <img src="assets/alacid-e-rebeca.png" alt="Alacid e Rebeca sorrindo juntos">
+    </div>
+    <div class="welcome-copy">
+      <div class="welcome-inner">
+        <div class="welcome-monogram"><img src="assets/logo-ar.png" alt="Monograma A e R de Alacid e Rebeca"></div>
+        <p class="welcome-kicker">NOSSO PROJETO DE VIDA</p>
+        <h1 id="welcome-title">Plano Financeiro<br><em>Pra Casar</em></h1>
+        <div class="welcome-divider"><span></span><i>◆</i><span></span></div>
+        <p class="welcome-date" id="welcome-wedding-date">Setembro de 2029</p>
+        <p class="welcome-note">Cada escolha de hoje prepara o lar que queremos construir amanhã.</p>
+        <button class="welcome-button" id="enter-plan" type="button">
+          Acessar nosso plano <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark"><img src="assets/logo-ar.png" alt=""></span><div><strong>Aliança Financeira</strong><small>Nosso plano de vida</small></div></div>
+      <nav aria-label="Navegação principal">
+        <button class="nav-item active" data-view="dashboard"><span>◫</span>Visão geral</button>
+        <button class="nav-item" data-view="metas"><span>◇</span>Metas</button>
+        <button class="nav-item" data-view="orcamento"><span>▤</span>Orçamento</button>
+        <button class="nav-item" data-view="aportes"><span>＋</span>Aportes</button>
+        <button class="nav-item" data-view="cronograma"><span>◷</span>Cronograma</button>
+        <button class="nav-item" data-view="cenarios"><span>⌁</span>Cenários</button>
+        <button class="nav-item" data-view="casados"><span>⌂</span>Vida de casados</button>
+        <button class="nav-item" data-view="revisoes"><span>✓</span>Revisões</button>
+      </nav>
+      <div class="side-note"><span class="dot"></span><div><strong>Dados neste dispositivo</strong><small>Sem conexão bancária</small></div></div>
+      <button class="nav-item" data-view="config"><span>⚙</span>Configurações</button>
+    </aside>
+
+    <main id="conteudo" tabindex="-1">
+      <header class="topbar">
+        <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <div><p class="eyebrow">ALACID <span class="eyebrow-ornament">◆</span> REBECA</p><h1 id="page-title">Visão geral</h1></div>
+        <div class="top-actions"><button class="icon-btn" id="theme" aria-label="Alternar tema">◐</button><button class="btn secondary" data-view="config">Ajustar plano</button></div>
+      </header>
+
+      <section class="view active" id="dashboard" data-title="Visão geral">
+        <div class="hero-grid">
+          <article class="status-card navy">
+            <div><p class="eyebrow pale">NOSSO PRÓXIMO CAPÍTULO</p><h2 id="hero-wedding-title">Casamento em setembro de 2029</h2><p>Planejar com amor, celebrar com propósito e começar a vida a dois em paz.</p></div>
+            <div class="date-badge"><span id="hero-wedding-month">SET</span><strong id="hero-wedding-year">2029</strong></div>
+          </article>
+          <article class="status-card gate"><div class="gate-icon">◆</div><div><p class="eyebrow">PORTÃO DE SEGURANÇA</p><h3 id="gate-title">Plano exige ajuste</h3><p id="gate-copy">A meta ainda não fecha apenas com o aporte informado.</p></div></article>
+        </div>
+
+        <div class="metrics" aria-label="Indicadores principais">
+          <article><span>Capital inicial</span><strong id="m-initial">—</strong><small>Cenário selecionado</small></article>
+          <article><span>Projeção até o casamento</span><strong id="m-projected">—</strong><small id="m-contrib">—</small></article>
+          <article><span>Meta completa</span><strong id="m-target">—</strong><small>Celebrar + proteger</small></article>
+          <article class="gap"><span>Diferença a cobrir</span><strong id="m-gap">—</strong><small id="m-extra">—</small></article>
+        </div>
+
+        <div class="content-grid">
+          <article class="panel chart-panel">
+            <div class="panel-head"><div><p class="eyebrow">TRAJETÓRIA</p><h2>Evolução do capital</h2></div><span class="pill" id="months-pill">33 meses</span></div>
+            <div class="chart-wrap"><canvas id="chart" width="760" height="310" aria-label="Gráfico de projeção financeira"></canvas></div>
+            <div class="legend"><span><i class="line teal"></i>Projeção atual</span><span><i class="line gold"></i>Meta proporcional</span></div>
+          </article>
+          <article class="panel next-panel">
+            <p class="eyebrow">PRÓXIMO MARCO</p><div class="milestone-icon">◇</div><h2>Noivado</h2><strong class="big-date" id="engagement-date">Janeiro de 2028</strong>
+            <div class="mini-progress"><span><b>Meta</b><b>R$ 2.000</b></span><div><i style="width:100%"></i></div></div>
+            <p class="ok">✓ Coberto pelo capital inicial</p>
+          </article>
+        </div>
+
+        <article class="panel goals-panel">
+          <div class="panel-head"><div><p class="eyebrow">DESTINO DO DINHEIRO</p><h2>Cinco metas, uma única decisão</h2></div><button class="text-btn" data-view="metas">Ver detalhes →</button></div>
+          <div class="goal-list" id="goal-list"></div>
+        </article>
+      </section>
+
+      <section class="view" id="metas" data-title="Metas financeiras">
+        <div class="section-intro"><div><p class="eyebrow">OBJETIVOS DO CASAL</p><h2>O que precisa estar pago antes do casamento</h2></div><p>Edite os valores. A projeção e os alertas são atualizados imediatamente.</p></div>
+        <div class="form-grid" id="goal-inputs"></div>
+        <article class="panel engagement-explainer">
+          <div><p class="eyebrow">POR QUE R$ 2.000?</p><h2>O noivado tem um teto, não uma obrigação de gasto</h2><p>Esse valor é uma reserva inicial para evitar que alianças, pedido e uma celebração simples sejam pagos com dívida. Deve ser substituído por cotações reais.</p></div>
+          <dl><div><dt>Alianças</dt><dd>R$ 1.200</dd></div><div><dt>Pedido ou celebração</dt><dd>R$ 500</dd></div><div><dt>Margem para ajustes</dt><dd>R$ 300</dd></div><div class="total"><dt>Teto provisório</dt><dd>R$ 2.000</dd></div></dl>
+        </article>
+        <article class="panel rule"><div><span class="rule-icon">◈</span><div><h3>Regra inegociável</h3><p>A reserva de emergência mínima de <strong id="reserve-floor-label">R$ 10.000</strong> não deve financiar festa, móveis ou custos previsíveis.</p></div></div><span class="pill safe">Proteção ativa</span></article>
+      </section>
+
+      <section class="view" id="orcamento" data-title="Orçamento do casamento">
+        <div class="section-intro"><div><p class="eyebrow">ATÉ 30 CONVIDADOS</p><h2>Celebração íntima, custo sob controle</h2></div><p>Distribua o teto da celebração entre as categorias para enxergar excessos antes de contratar.</p></div>
+        <article class="panel"><div class="budget-table" id="budget-table"></div><div class="budget-total"><span>Total distribuído</span><strong id="budget-sum">—</strong><span id="budget-status" class="pill">—</span></div></article>
+      </section>
+
+      <section class="view" id="aportes" data-title="Registro de aportes">
+        <div class="split">
+          <article class="panel"><p class="eyebrow">NOVO REGISTRO</p><h2>Registrar aporte</h2><form id="contribution-form" class="stack"><label>Data<input required type="date" name="date"></label><label>Responsável<select name="person"><option>Cide</option><option>Rebeca</option></select></label><label>Valor (R$)<input required min="0" step="0.01" type="number" name="amount" placeholder="900"></label><label>Observação<input name="note" maxlength="60" placeholder="Ex.: aporte de fevereiro"></label><button class="btn primary" type="submit">Adicionar aporte</button></form></article>
+          <article class="panel"><div class="panel-head"><div><p class="eyebrow">HISTÓRICO</p><h2>Aportes realizados</h2></div><strong id="contribution-total">R$ 0</strong></div><div id="contribution-list" class="records"></div></article>
+        </div>
+      </section>
+
+      <section class="view" id="cronograma" data-title="Cronograma e decisões">
+        <div class="section-intro"><div><p class="eyebrow" id="timeline-period">JANEIRO 2027 — SETEMBRO 2029</p><h2>Uma decisão por vez</h2></div><p>Altere as datas aqui. O painel e as projeções financeiras serão recalculados automaticamente.</p></div>
+        <article class="panel schedule-editor">
+          <div class="panel-head"><div><p class="eyebrow">DATAS PRINCIPAIS</p><h2>Calendário do casal</h2></div><span class="pill" id="schedule-months">33 meses de contribuição</span></div>
+          <div class="schedule-grid">
+            <label>Início do namoro<input id="date-dating" type="month"></label>
+            <label>Início dos aportes<input id="date-contributions" type="month"></label>
+            <label>Noivado<input id="date-engagement" type="month"></label>
+            <label>Casamento<input id="date-wedding" type="month"></label>
+          </div>
+          <p class="schedule-help" id="schedule-help">A quantidade de aportes considera o mês inicial e o mês do casamento.</p>
+        </article>
+        <div class="timeline" id="timeline"></div>
+        <article class="panel add-milestone">
+          <div><p class="eyebrow">NOVA ETAPA</p><h2>Adicionar ao cronograma</h2></div>
+          <form id="milestone-form" class="milestone-form">
+            <label>Mês<input name="date" type="month" required></label>
+            <label>Título<input name="title" maxlength="55" required placeholder="Ex.: Escolher local"></label>
+            <label class="wide">Descrição<input name="description" maxlength="120" required placeholder="O que precisa estar decidido?"></label>
+            <label>Status<input name="status" maxlength="30" required placeholder="Ex.: Decisão conjunta"></label>
+            <button class="btn primary" type="submit">Adicionar etapa</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="view" id="cenarios" data-title="Simulador de cenários">
+        <div class="section-intro"><div><p class="eyebrow">TESTE ANTES DE DECIDIR</p><h2>O que muda se a renda ou o aporte mudar?</h2></div><p>Este simulador não altera o plano salvo até você confirmar.</p></div>
+        <div class="scenario-layout"><article class="panel scenario-controls"><label>Capital inicial <output id="s-initial-out"></output><input id="s-initial" type="range" min="0" max="15000" step="100"></label><label>Aporte de Cide <output id="s-cide-out"></output><input id="s-cide" type="range" min="0" max="1800" step="50"></label><label>Aporte de Rebeca <output id="s-rebeca-out"></output><input id="s-rebeca" type="range" min="0" max="1800" step="50"></label><button class="btn primary" id="apply-scenario">Aplicar ao plano</button></article><article class="panel scenario-result"><p class="eyebrow" id="scenario-period">RESULTADO NO CASAMENTO</p><strong id="s-projected">—</strong><div class="scenario-bar"><i id="s-bar"></i></div><dl><div><dt>Meta</dt><dd id="s-target">—</dd></div><div><dt>Diferença</dt><dd id="s-gap">—</dd></div><div><dt>Aporte adicional necessário</dt><dd id="s-extra">—</dd></div></dl><p id="s-message" class="callout"></p></article></div>
+      </section>
+
+      <section class="view" id="casados" data-title="Primeiro ano de casados">
+        <div class="section-intro"><div><p class="eyebrow">MANAUS · ALUGAR PRIMEIRO</p><h2>Casa sustentável antes do financiamento</h2></div><p>Estimativa provisória para discutir, pesquisar aluguel e substituir por cotações reais.</p></div>
+        <div class="content-grid"><article class="panel"><h2>Despesas mensais</h2><div id="home-budget" class="home-budget"></div></article><article class="panel household-summary"><p class="eyebrow">DIVISÃO PRETENDIDA</p><div class="donut" id="donut"><span>80%<small>Cide</small></span></div><dl><div><dt>Custo mensal</dt><dd id="home-total">—</dd></div><div><dt>Parte de Cide</dt><dd id="home-cide">—</dd></div><div><dt>Parte de Rebeca</dt><dd id="home-rebeca">—</dd></div><div><dt>Reserva cobre</dt><dd id="months-covered">—</dd></div></dl><p class="callout warning">A divisão deve acompanhar a renda real. Se ela mudar, revisem o percentual sem transformar cuidado em sobrecarga.</p></article></div>
+      </section>
+
+      <section class="view" id="revisoes" data-title="Revisões do plano">
+        <div class="section-intro"><div><p class="eyebrow">CONVERSA E PRESTAÇÃO DE CONTAS</p><h2>Revisão trimestral do casal</h2></div><p>Um roteiro simples para apresentar o plano com clareza ao casal, à família ou à liderança pastoral.</p></div>
+        <div class="review-grid" id="reviews"></div>
+        <article class="panel teacher"><p class="eyebrow">ROTEIRO PARA APRESENTAÇÃO</p><h2>Explique o plano em quatro perguntas</h2><ol><li><strong>Qual é o propósito?</strong> Casar sem dívidas e preservar a paz financeira.</li><li><strong>Quanto custa?</strong> <span id="guide-total">R$ 59 mil</span> no cenário completo, incluindo lua de mel e reserva de 12 meses.</li><li><strong>Como será alcançado?</strong> Capital inicial, aportes mensais e revisões trimestrais.</li><li><strong>Qual é o limite?</strong> A reserva mínima de R$ 10 mil não financia gastos previsíveis.</li></ol></article>
+      </section>
+
+      <section class="view" id="config" data-title="Configurações do plano">
+        <div class="section-intro"><div><p class="eyebrow">PREMISSAS EDITÁVEIS</p><h2>Transforme estimativas em decisões</h2></div><p>Os dados ficam apenas neste navegador. Exporte uma cópia antes de trocar de dispositivo.</p></div>
+        <article class="panel"><form id="settings-form" class="settings-grid"><label>Capital inicial (R$)<input name="initial" type="number" min="0" step="100"></label><label>Aporte mensal de Cide (R$)<input name="cideMonthly" type="number" min="0" step="50"></label><label>Aporte mensal de Rebeca (R$)<input name="rebecaMonthly" type="number" min="0" step="50"></label><label>Meses de contribuição (automático)<input name="months" type="number" readonly aria-describedby="months-source"></label><label>Reserva mínima intocável (R$)<input name="reserveFloor" type="number" min="0" step="500"></label><label>Participação de Cide nas despesas (%)<input name="cideShare" type="number" min="50" max="100"></label><button class="btn primary" type="submit">Salvar alterações</button></form><p class="settings-note" id="months-source">O número de meses é calculado pelas datas definidas no cronograma.</p></article>
+        <article class="panel data-actions"><div><h3>Relatório e cópia de segurança</h3><p>Imprima o plano, exporte os dados ou restaure uma cópia.</p></div><div><button class="btn secondary" id="print">Imprimir / PDF</button><button class="btn secondary" id="csv">Exportar CSV</button><button class="btn secondary" id="json">Exportar JSON</button><label class="btn secondary file">Importar JSON<input id="import" type="file" accept="application/json"></label><button class="btn danger" id="reset">Restaurar demonstração</button></div></article>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
