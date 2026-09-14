@@ -1,0 +1,18 @@
+{
+  "name": "Plano Financeiro Pra Casar — Alacid & Rebeca",
+  "short_name": "Plano A & R",
+  "description": "Planejamento financeiro do casamento de Alacid e Rebeca.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#153f3a",
+  "icons": [
+    {
+      "src": "assets/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
